@@ -1,0 +1,110 @@
+﻿{include file=comm/head.html}
+
+<div class="index news zsgx productjia" num='0'>
+	<div class="main">
+		<div class="yuanfang zsgxdesc">
+			<div class="newchos">
+				<div class="sjd">更多课程 +</div>
+				<div class="productls">
+					<div class="chosbs" zt="0">
+						{pboot:nav parent=8}
+						<div class="ultop">
+							<div class="productyiji">[nav:name]</div>
+							<ul>
+								{pboot:2nav parent=[nav:scode]}
+								<li class="" xiaobiaoji="[2nav:scode]">
+									<a href="javascript:;" xiaobiaoji="[2nav:scode]"
+										xiaobiaoji2="[nav:scode]">[2nav:name]</a>
+								</li>
+								{/pboot:2nav}
+							</ul>
+						</div>
+						{/pboot:nav}
+					</div>
+				</div>
+			</div>
+			<div class="newls">
+				<div class="newlslsdesc">
+					{pboot:list scode=8}
+					<div class="newlsli hyhd xwgg newlslsde[list:scode]">
+						<div class="newsimg">
+							<div>
+								<a href="[list:link]">
+									<img src="[list:ico]" alt="[list:title]">
+								</a>
+							</div>
+						</div>
+						<div class="newlswste">
+							<div>[list:title]</div>
+							<div>[list:subtitle]</div>
+							<span class="xuanfusvg">
+								<a href="[list:link]">
+									<img src="/images/lv-jiantou.svg" alt="[list:title]">
+								</a>
+							</span>
+						</div>
+					</div>
+					{/pboot:list}
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(function () {
+		$('.zsgx .main .productls ul').eq(0).slideDown()
+        $('.zsgx .main .ultop').eq(0).addClass('done')
+	
+	$('.ultop').click(function () {
+      $('.zsgx .main .productls>div').attr('zt')
+      if ($('.zsgx .main .productls>div').attr('zt') == $(this).index()) {} else {
+        $('.zsgx .main .productls>div').attr('zt', $(this).index())
+        $('.zsgx .main .productls ul').slideUp()
+        $('.zsgx .main .ultop').removeClass('done')
+        $(this).addClass('done')
+        $(this).find('ul').slideDown("slow")
+      }
+    })
+	$('.zsgx .main .productls ul li').click(function () {
+		$('.zsgx .main .productls ul li').removeClass('show')
+		$(this).addClass('show')
+		$('.zsgx .newlslsdesc>div').addClass('hid').removeClass('shownum')
+		$('.zsgx .newlslsdesc>div.newlslsde'+$(this).attr('xiaobiaoji')).removeClass('hid').addClass('shownum')
+		if ($('.zsgx .newlslsdesc>div.shownum').length==0) {
+			alert('抱歉所选栏目无内容')
+			
+		}
+		if ($('html')[0].clientWidth < 1100){
+                $('.zsgx .main .sjd').attr('zt', '')
+                $('.zsgx .main .sjd').text('更多课程 +')
+                $('.zsgx .main .sjd').removeClass('show')
+                $('.zsgx .main .productls').removeClass('phoneshow').css('height', 0)
+            } 
+	})
+    $('.productjia .main .sjd').click(function () {
+      if ($(this).attr('zt')) {
+        $(this).attr('zt', '')
+        $(this).text('更多课程 +')
+        $(this).removeClass('show')
+        $('.productjia .main .productls').removeClass('phoneshow').css('height',0)
+      } else {
+        $(this).attr('zt', '1')
+        $(this).text('收起 -')
+        $(this).addClass('show')
+        $('.productjia .main .productls').css('height',$('.chosbs')[0].offsetHeight+200).addClass('phoneshow')
+      }
+    })
+	})
+</script>
+<!-- {pboot:list order=date}
+					<li>
+						<a href="[list:link]">
+							<div class="newdata">[list:date style=Y-m-d]</div>
+							<div class="newdtext pc-port">[list:title lencn=50]</div>
+							<div class="newdtext phone-port">[list:title lencn=25]</div>
+							<div class="newjt"><img src="/images/jiantou.svg" alt=""></div>
+						</a>
+					</li>
+					{/pboot:list} -->
+{include file=comm/foot.html}

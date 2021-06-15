@@ -1,0 +1,369 @@
+{include file=comm/head.html}
+
+<div class="index jobls">
+	<div class="pc-port">
+		<div class="banner">
+			<img src="{sort:pic}" alt="">
+		</div>
+	</div>
+	<div class="phone-port">
+		<div class="banner-hpone">
+			<img src="{sort:ico}" alt="">
+		</div>
+	</div>
+	<div class="main typb1">
+		<div class="rcfzjh yf">
+
+			{pboot:list scode=47}
+			<div class="tltle">
+				<div class="lit">[list:subtitle]</div>
+				<div class="zhu">[list:title]</div>
+			</div>
+			<div class="rcfzjhtext">[list:content]</div>
+
+			{/pboot:list}
+
+			<div class="rcfzjhhover">
+				<ul>
+					<li>
+						<div>
+							<span>
+								<!-- <img src="/images/rcfzjhhover11.svg" alt=""> -->
+							</span>
+						</div>
+						<div>以人为本</div>
+						<div>people oriented</div>
+					</li>
+					<li>
+						<div>
+							<span>
+							</span>
+						</div>
+						<div>横向发展</div>
+						<div>Horizontal development oriented</div>
+					</li>
+					<li>
+						<div>
+							<span>
+							</span>
+						</div>
+						<div>完善的职业发展系统</div>
+						<div>Career Development System</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="rcln yf">
+
+			{pboot:list scode=48}
+
+			<div class="tltle">
+				<div class="lit">[list:subtitle]</div>
+				<div class="zhu">[list:title]</div>
+			</div>
+			<div class="rclntext">[list:content]</div>
+			{/pboot:list}
+
+
+
+
+
+
+
+		</div>
+		<div class="rcbgs jhxm">
+			<div class="porlsswiper">
+				<div class="home-swiperall swiper-prols1">
+					<div class="home-swipezjr swiper-wrapper">
+
+
+
+						{pboot:list scode=49}
+
+						<div class="swiper-slide">
+							<img src="[list:ico]" alt="[list:title]">
+						</div>
+
+						{/pboot:list}
+						{pboot:list scode=49}
+
+						<div class="swiper-slide">
+							<img src="[list:ico]" alt="[list:title]">
+						</div>
+
+						{/pboot:list}
+
+
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<!-- Add Pagination -->
+			</div>
+		</div>
+		<div class="fldy">
+			<div class="tltle">
+				<div class="lit">Welfare</div>
+				<div class="zhu">福利待遇</div>
+			</div>
+			<div class="fldydesc yf">
+				<ul>
+					<li>
+						<div>
+							<img src="/images/fldy1.svg" alt="">
+						</div>
+						<div>五险一金</div>
+					</li>
+					<li>
+						<div>
+							<img src="/images/fldy2.svg" alt="">
+						</div>
+						<div>年终奖金</div>
+					</li>
+					<li>
+						<div>
+							<img src="/images/fldy3.svg" alt="">
+						</div>
+						<div>薪资增长</div>
+					</li>
+					<li>
+						<div>
+							<img src="/images/fldy4.svg" alt="">
+						</div>
+						<div>薪资增长</div>
+					</li>
+					<li>
+						<div>
+							<img src="/images/fldy5.svg" alt="">
+						</div>
+						<div>周末双休</div>
+					</li>
+					<li>
+						<div>
+							<img src="/images/fldy6.svg" alt="">
+						</div>
+						<div>餐饮补贴</div>
+					</li>
+					<li>
+						<div>
+							<img src="/images/fldy7.svg" alt="">
+						</div>
+						<div>交通补贴</div>
+					</li>
+					<li>
+						<div>
+							<img src="/images/fldy8.svg" alt="">
+						</div>
+						<div>年度体检</div>
+					</li>
+					<li>
+						<div>
+							<img src="/images/fldy9.svg" alt="">
+						</div>
+						<div>出国学习</div>
+					</li>
+					<li>
+						<div>
+							<img src="/images/fldy10.svg" alt="">
+						</div>
+						<div>股权激励</div>
+					</li>
+					<li>
+						<div>
+							<img src="/images/fldy11.svg" alt="">
+						</div>
+						<div>团建活动</div>
+					</li>
+					<li>
+						<div>
+							<img src="/images/fldy12.svg" alt="">
+						</div>
+						<div>生日福利</div>
+					</li>
+					<li>
+						<div>
+							<img src="/images/fldy13.svg" alt="">
+						</div>
+						<div>节日福利</div>
+					</li>
+					<li>
+						<div>
+							<img src="/images/fldy14.svg" alt="">
+						</div>
+						<div>节日福利</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="shzp yf ">
+			<div class="shzptops"><span class="done">社会招聘</span><span>校园招聘</span></div>
+			<div class="shzpdesc">
+				<div class="in_shzp jhxm">
+					<div class="porlsswiper">
+						<div class="home-swiperall swiper-prols2">
+							<div class="home-swipezjr swiper-wrapper">
+								<div class="swiper-slide">
+									<ul>
+										{pboot:list scode=33 num=15}
+										<li class="shzpxx" id="[list:id]"
+										 zwmc="[list:title]"
+										 zwms="[list:ext_zige]"
+										 rzzg="[list:ext_zhiwei]"
+										 >
+											<div>[list:title]</div>
+											<div>[list:content]</div>
+										</li>
+										{pboot:if([list:i]%4==0)}
+									</ul>
+								</div>
+								<div class="swiper-slide">
+									<ul>
+										{/pboot:if}
+
+										{/pboot:list}
+									</ul>
+								</div>
+
+							</div>
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+				<div class="in_xyzp jhxm">
+					<div class="porlsswiper">
+						<div class="home-swiperall swiper-prols3">
+							<div class="home-swipezjr swiper-wrapper">
+								<div class="swiper-slide" id="[list:id]">
+									<ul>
+										{pboot:list scode=34 num=16}
+										<li class="shzpxx" zwmc="[list:title]"
+										zwms="[list:ext_zige]"
+										rzzg="[list:ext_zhiwei]">
+											<div>[list:title]</div>
+											<div>[list:content]</div>
+										</li>
+										{pboot:if([list:i]%4==0)}
+									</ul>
+								</div>
+								<div class="swiper-slide">
+									<ul>
+										{/pboot:if}
+										{/pboot:list}
+									</ul>
+								</div>
+								
+							</div>
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	{pboot:list scode=33,34 num=1}
+	<div class="mb" id="[list:id]">
+		<div class="gzdt">
+			<div>[list:title]</div>
+			<div>
+				<div>职位描述：</div>
+				<div>[list:ext_zige]</div>
+				<div>任职资格：</div>
+				<div>[list:ext_zhiwei]</div>
+			</div>
+			<span class="guanbi">x</span>
+		</div>
+	</div>
+	{/pboot:list}
+
+
+</div>
+<script src="/js/swiper-bundle.min.js"> </script>
+<script>
+	$(function () {
+		var swiper3 = new Swiper('.swiper-prols2', {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			slidesPerGroup: 1,
+			loop: true,
+			loopFillGroupWithBlank: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+		var swiper2 = new Swiper('.swiper-prols3', {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			slidesPerGroup: 1,
+			loop: true,
+			loopFillGroupWithBlank: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+		var swiper1 = new Swiper('.swiper-prols1', {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			slidesPerGroup: 1,
+			loop: true,
+			loopFillGroupWithBlank: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+		
+		$('.jhxm').each(function () {
+			let that=$(this).find('.swiper-pagination-bullet')
+			console.log(that.length);
+			if (that.length>1) {
+				that.eq(0).html('<b>01</b>')
+			that.eq(that.length-1).html('<b>0'+that.length+'</b>')
+			}
+		})
+		$('.jobls .shzptops>span').click(function () {
+			$('.jobls .shzptops>span').removeClass('done')
+			$(this).addClass('done')
+			$('.jobls .shzpdesc').css('left', '-' + $(this).index() + '00%')
+
+		})
+		$('.jobls .shzpdesc .shzpxx').click(function () {
+			$('.jobls .gzdt>div:nth-child(1)').html($(this).attr('zwmc'))
+			$('.jobls .gzdt>div:nth-child(2)>div:nth-child(2)').html($(this).attr('zwms'))
+			$('.jobls .gzdt>div:nth-child(2)>div:nth-child(4)').html($(this).attr('rzzg'))
+			$('.jobls .mb').css('display', 'block')
+		})
+		$('.jobls .gzdt .guanbi').click(function () {
+			$('.jobls .mb').css('display', 'none')
+		})
+		$('.jobls .mb').click(function () {
+			$('.jobls .mb').css('display', 'none')
+		})
+		$('.jobls .gzdt').click(function () {
+			event.stopPropagation();
+		})
+		$('body').css('background', 'none')
+		$('.swiper-pagination').each(function (x) {
+			console.log($(this).html());
+			// $(this).html('<i>01</i>'+$(this).html()+'<i>0'+$(this).find('span').length+'</i>')
+		})
+	})
+</script>
+{include file=comm/foot.html}

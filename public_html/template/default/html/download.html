@@ -1,0 +1,146 @@
+{include file=comm/head.html}
+<div class="index product download" num='0'>
+    <div class="main">
+        <div class="daohangtop">
+            <a href="{pboot:sitepath}/">Home</a> >>
+            <span class="zongbiaodan">product</span>
+            <span class="dolzibiaoqian">>> vw</span>
+        </div>
+        <div class="productdesc">
+            <div class="sjd">Product screening +</div>
+            <div class="productls">
+                <div class="chosbs" zt="1000">
+                    {pboot:nav parent=5}
+                    <div
+                        class="ultop {pboot:if('[nav:scode]'=='{sort:pcode}')}done{/pboot:if} {pboot:if('[nav:scode]'=='{sort:scode}')}done{/pboot:if}">
+                        <div class="productyiji">[nav:name]</div>
+                        <ul>
+                            {pboot:2nav parent=[nav:scode]}
+                            <li class="{pboot:if('[2nav:scode]'=='{sort:scode}')}show{/pboot:if}"
+                                xiaobiaoji="[2nav:scode]">
+                                <span xiaobiaoji2="{sort:scode}">[2nav:name]</span>
+                            </li>
+                            {/pboot:2nav}
+                        </ul>
+                    </div>
+                    {/pboot:nav}
+                </div>
+            </div>
+            <div class="downimg">
+                <div>
+                    <ul>
+                        <div class="tywidth">
+                            <div>NO.</div>
+                            <div>Pictures</div>
+                            <div>Product Name</div>
+                            <div>Part number</div>
+                            <div>Car Maker</div>
+                            <div>Model</div>
+                            <div>Year</div>
+                            <div>Application</div>
+                            <div>all <span class="zongkuang xzk"></span></div>
+                        </div>
+                        {pboot:list scode=5 num=1000}
+                        <li class="tywidth" biaoji="[list:scode]" cpxvhao="[list:id]">
+                            <div class="xvhao">[list:i]</div>
+                            <div><a href="[list:link]"><img src="[list:ico]" alt=""></a></div>
+                            <div>[list:title]</div>
+                            <div>[list:ext_PartNumber]</div>
+                            <div>[list:ext_CarMarker]</div>
+                            <div>[list:ext_Model]</div>
+                            <div>[list:date style=Y]</div>
+                            <div>[list:ext_Application]</div>
+                            <div><span class="xzk"></span></div>
+                        </li>
+                        {/pboot:list}
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('.xuanfu>div').eq(0).addClass('done')
+        $('.ultop').click(function () {
+            $('.product .main .productls>div').attr('zt')
+            if ($('.product .main .productls>div').attr('zt') == $(this).index()) {} else {
+                $('.product .main .productls>div').attr('zt', $(this).index())
+                $('.product .main .productls ul').slideUp()
+                $('.product .main .ultop').removeClass('done')
+                $(this).addClass('done')
+                $(this).find('ul').slideDown("slow")
+            }
+        })
+        $('.download .downimg li .xzk').click(function () {
+            if ($(this).parent().parent().attr('zt')) {
+                $(this).parent().parent().attr('zt', '')
+                $(this).parent().parent().removeClass('done')
+            } else {
+                $(this).parent().parent().attr('zt', '1')
+                $(this).parent().parent().addClass('done')
+            }
+        })
+        $('.download .downimg .zongkuang').click(function () {
+            if ($(this).attr('zt')) {
+                $(this).attr('zt', '')
+                $(this).parent().parent().removeClass('done')
+                $('.download .downimg ul>li.show').attr('zt', '')
+                $('.download .downimg ul>li.show').removeClass('done')
+            } else {
+                $(this).attr('zt', '1')
+                $(this).parent().parent().addClass('done')
+                $('.download .downimg ul>li.show').attr('zt', '1')
+                $('.download .downimg ul>li.show').addClass('done')
+            }
+        })
+        $('.product .main .productdesc>.sjd').click(function () {
+            if ($(this).attr('zt')) {
+                $(this).attr('zt', '')
+                $(this).text('Product screening +')
+                $(this).removeClass('show')
+                $('.product .main .productls').removeClass('phoneshow').css('height', 0)
+            } else {
+                $(this).attr('zt', '1')
+                $(this).text('collect -')
+                $(this).addClass('show')
+                $('.product .main .productls').css('height', $('.chosbs')[0].offsetHeight + 200)
+                    .addClass('phoneshow')
+            }
+        })
+        $('.product .main .productls ul li').click(function () {
+            $('.product .main .productls ul li').removeClass('show')
+            $(this).addClass('show')
+            let num = $(this).attr('xiaobiaoji')
+            $('.download .downimg ul>li').each(function (numxh) {
+                if (num == $(this).attr('biaoji')) {
+                    $(this).addClass('show')
+                    $(this).css('display', 'flex')
+                } else {
+                    $(this).removeClass('show')
+                    $(this).css('display', 'none')
+                }
+                if (numxh + 1 >= $('.download .downimg ul>li').length) {
+                    if ($('.download .downimg ul>li.show').length == 0) {
+                        alert('栏目下无产品')
+                    } else {
+                        for (let index = 0; index < $('.download .downimg ul>li.show')
+                            .length; index++) {
+                            $('.download .downimg ul>li.show').eq(index).find('.xvhao').text(
+                                index + 1)
+                        }
+                    }
+                }
+            })
+        })
+        $('.zongbiaodan').click(function () {
+            $('.download .downimg ul>li').addClass('show').css('display', 'flex')
+            for (let index = 0; index < $('.download .downimg ul>li.show').length; index++) {
+                $('.download .downimg ul>li.show').eq(index).find('.xvhao').text(index + 1)
+            }
+        })
+    })
+</script>
+{include file=comm/foot.html}

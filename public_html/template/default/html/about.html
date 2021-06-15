@@ -1,0 +1,414 @@
+{include file=comm/head.html}
+
+<div class="index aboutas">
+	<div class="pc-port">
+		<div class="banner">
+			<img src="{sort:pic}" alt="">
+		</div>
+	</div>
+	<div class="phone-port">
+		<div class="banner-hpone">
+			<img src="{sort:ico}" alt="">
+		</div>
+	</div>
+	<div class="main typb1">
+		<div class="gsjj yuanfang">
+			{pboot:list scode=39}
+			<div class="tltle">
+				<div class="lit">[list:subtitle]</div>
+				<div class="zhu">[list:title]</div>
+			</div>
+			<div class="gsjjtext">[list:content]</div>
+			{/pboot:list}
+
+
+		</div>
+		<div class="twoimg">
+
+
+			{pboot:pics id=1 num=2}
+			<div>
+				<img src="[pics:src]">
+			</div>
+			{/pboot:pics}
+
+		</div>
+		<div class="gsjj yuanfang">
+
+
+			{pboot:list scode=40}
+
+			<div class="tltle">
+				<div class="lit">[list:subtitle]</div>
+				<div class="zhu">[list:title]</div>
+			</div>
+			<div class="gsjjtext">[list:content]</div>
+			{/pboot:list}
+
+		</div>
+		<div class="threesvg">
+			<div class="yuanfang">
+				<ul>
+					<li>
+						<div class="topsvg">
+							<img src="/images/threesvg1.svg" alt="">
+						</div>
+						<div class="jzg">价值观</div>
+						<div class="miaoshu">以客户为中心、诚信、信任、创新</div>
+					</li>
+					<li>
+						<div class="topsvg">
+							<img src="/images/threesvg2.svg" alt="">
+						</div>
+						<div class="jzg">使命</div>
+						<div class="miaoshu">让每一个孩子更健康</div>
+					</li>
+					<li>
+						<div class="topsvg">
+							<img src="/images/threesvg3.svg" alt="">
+						</div>
+						<div class="jzg">愿景</div>
+						<div class="miaoshu">打造儿童遗传病大数据精准诊疗一体化平台</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="csr">
+			<div class="porlsswiper pc-port">
+				<div class="home-swiperall swiper-prols_csr">
+					<div class="home-swipezjr swiper-wrapper">
+
+
+
+						{pboot:list scode=41}
+
+						<div class="swiper-slide csrdesc">
+							<div class="csrtext">
+								<div>[list:subtitle]</div>
+								<div>[list:title]</div>
+								<div>[list:content]</div>
+							</div>
+							<div class="csrimg">
+								<img src="[list:ico]" alt="[list:title]">
+							</div>
+						</div>
+						{/pboot:list}
+
+
+
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+			</div>
+			<div class="csr-phone phone-port yuanfang">
+				{pboot:list scode=41}
+				<div class="csr-sj">
+					<div class="csrsj-text">
+						<div>[list:subtitle]</div>
+						<div>[list:title]</div>
+						<div>[list:content]</div>
+					</div>
+					<div class="csrimg">
+						<img src="[list:ico]" alt="[list:title]">
+					</div>
+				</div>
+				{/pboot:list}
+			</div>
+		</div>
+		<div class="fzlc">
+			<div class="tltle">
+				<div class="lit">news information</div>
+				<div class="zhu">发展历程</div>
+			</div>
+			<div class="scceshi">
+				<div class="sfbeishu">
+					<div class="dnadongtai to2015">
+						<div class="dnaimg">
+							<img src="/images/dna.png" alt="">
+							<div class="dnanian">
+								<ul>
+									<li>
+										<div class="nx">2015</div>
+										<div class="nianqiu">
+											<div>
+												<div></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="nx">2016</div>
+										<div class="nianqiu">
+											<div>
+												<div></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="nx">2017</div>
+										<div class="nianqiu">
+											<div>
+												<div></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="nx">2018</div>
+										<div class="nianqiu">
+											<div>
+												<div></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="nx">2019</div>
+										<div class="nianqiu">
+											<div>
+												<div></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="nx">2020</div>
+										<div class="nianqiu">
+											<div>
+												<div></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="nx">2021</div>
+										<div class="nianqiu">
+											<div>
+												<div></div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="fzlcdesc yuanfang">
+				<div class="porlsswiper">
+					<div class="home-swiperall swiper-prols_fzlc">
+						<div class="home-swipezjr swiper-wrapper">
+
+
+
+							{pboot:list scode=42 order='sorting desc,id desc'}
+							<div class="swiper-slide" nianfen="[list:sortname]">
+								<div>[list:title]</div>
+								<div>[list:content]</div>
+							</div>
+							{/pboot:list}
+
+
+
+						</div>
+						<!-- Add Arrows -->
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="guangqiu">
+			<div class="porlsswiper yuanfang">
+				<div class="home-swiperall swiper-prols3">
+					<div class="home-swipezjr swiper-wrapper">
+						{pboot:list scode=43}
+						<div class="swiper-slide">
+							<img src="[list:ico]" alt="[list:outlink]">
+						</div>
+						{/pboot:list}
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+					<!-- Add Arrows -->
+				</div>
+			</div>
+		</div>
+		<div class="zzry yuanfang">
+			<div class="tltle">
+				<div class="lit">Qualification Honor</div>
+				<div class="zhu">资质荣誉</div>
+			</div>
+			<div>
+				<div class="porlsswiper">
+					<div class="home-swiperall swiper-syszz">
+						<div class="home-swipezjr swiper-wrapper">
+							{pboot:list scode=44}
+							<div class="swiper-slide">
+								<img src="[list:ico]" alt="[list:title]">
+							</div>
+							{/pboot:list}
+						</div>
+						<!-- Add Arrows -->
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="lczl">
+			<div class="yuanfang">
+				<div class="tltle">
+					<div class="lit">cooperative partner</div>
+					<div class="zhu">临床诊疗与产品研发</div>
+				</div>
+				<div class="lczllogo">
+					<ul>
+
+						{pboot:list scode=45}
+						<li>
+							<div><img src="[list:ico]" alt="[list:title]"></div>
+						</li>
+						{/pboot:list}
+
+
+
+
+					</ul>
+				</div>
+				<div class="tltle">
+					<div class="lit">cooperative partner</div>
+					<div class="zhu">科研机构</div>
+				</div>
+				<div class="lczllogo">
+					<ul>
+						{pboot:list scode=46}
+						<li>
+							<div><img src="[list:ico]" alt="[list:title]"></div>
+						</li>
+						{/pboot:list}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/js/swiper-bundle.min.js"> </script>
+<script>
+	$(function () {
+		var swiper1 = new Swiper('.swiper-prols_csr', {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			slidesPerGroup: 1,
+			loop: true,
+			loopFillGroupWithBlank: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+		if ($('html')[0].clientWidth > 1100) {
+			var swiper_fzlc = new Swiper('.swiper-prols_fzlc', {
+				slidesPerView: 3,
+				spaceBetween: 30,
+				slidesPerGroup: 1,
+				// loop: true,
+				// loopFillGroupWithBlank: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				on: {
+					slideChangeTransitionEnd: function () {
+						// console.log(this);//切换结束时，告诉我现在是第几个slide
+						// console.log($('.fzlc .swiper-slide-next').attr('nianfen'));
+						$('.aboutas .fzlc .dnadongtai').removeClass('to2021').removeClass('to2020')
+							.removeClass('to2019').removeClass('to2018').removeClass('to2017')
+							.removeClass('to2016').removeClass('to2015')
+						// console.log($('.fzlc .swiper-slide-next').attr('nianfen'));
+						$('.aboutas .fzlc .dnadongtai').addClass('to' + $('.fzlc .swiper-slide-next')
+							.attr(
+								'nianfen'))
+					},
+				},
+			});
+		} else {
+			var swiper_fzlc = new Swiper('.swiper-prols_fzlc', {
+				slidesPerView: 1,
+				spaceBetween: 30,
+				slidesPerGroup: 1,
+				// loop: true,
+				// loopFillGroupWithBlank: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				on: {
+					slideChangeTransitionEnd: function () {
+						// console.log(this);//切换结束时，告诉我现在是第几个slide
+						console.log($('.fzlc .swiper-slide-active').attr('nianfen'));
+						$('.aboutas .fzlc .dnadongtai').removeClass('to2021').removeClass('to2020')
+							.removeClass('to2019').removeClass('to2018').removeClass('to2017')
+							.removeClass('to2016').removeClass('to2015')
+						console.log($('.fzlc .swiper-slide-active').attr('nianfen'));
+						$('.aboutas .fzlc .dnadongtai').addClass('to' + $('.fzlc .swiper-slide-active')
+							.attr(
+								'nianfen'))
+					},
+				},
+			});
+		}
+
+
+		var swiper4 = new Swiper('.swiper-prols3', {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			slidesPerGroup: 1,
+			loop: true,
+			loopFillGroupWithBlank: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			}
+
+		});
+		var swiper_syszz = new Swiper('.swiper-syszz', {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			slidesPerGroup: 1,
+			loop: true,
+			loopFillGroupWithBlank: true,
+			pagination: {
+				el: '.swiper-pagination_syszz',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+		let windomWidth = 1440;
+		let windomHeight = 101.76;
+		let widthbili = $('html')[0].clientWidth / windomWidth;
+		let widthbileft = -(windomWidth - $('html')[0].clientWidth) / 2;
+		let widthbitop = windomHeight * (widthbili - 1) / 2
+		$(".sfbeishu").css("transform", "scale(" + widthbili + "," + widthbili + ")").css("left",
+			widthbileft).css("top", widthbitop)
+		// $(".scceshi").css('height', windomHeight * widthbili)
+
+	})
+</script>
+{include file=comm/foot.html}

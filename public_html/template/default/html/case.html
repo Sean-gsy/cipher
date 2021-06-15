@@ -1,0 +1,32 @@
+﻿{include file=comm/head.html}
+
+<div class="index new" num='0'>
+
+	<div class="main">
+		<div class="yf">
+			<div class="title">{content:title}</div>
+			<div class="newsj">
+				<div class="newdata">{content:date style=Y-m-d}</div>
+				<div class="datahg"></div>
+			</div>
+			<div class="newdesc">
+				{content:content}
+			</div>
+			<div class="newchos">
+				<div class="newleft">
+						>> 上一篇：<span>{content:precontent  lencn=7}</span>
+				</div>
+				<div class="new-next">
+					{pboot:sort scode=8}
+                    <a href="[sort:link]">回到列表</a>
+                    {/pboot:sort}
+				</div>
+				<div class="newright">
+					下一篇：<span>{content:nextcontent lencn=7}</span> >>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+{include file=comm/foot.html}

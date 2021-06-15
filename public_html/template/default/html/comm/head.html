@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{pboot:pagetitle}</title>
+    <link rel="stylesheet" href="/css/reset-easy.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style-phone.css">
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <script src="/js/jquery-3.4.0.min.js"></script>
+    <script src="/js/index.js"></script>
+</head>
+
+<body>
+    <header class="home-head">
+        <div class="pc-port">
+            <div class="liebiao ">
+                <div>
+                    <a href="{pboot:sitepath}/"><img src="/images/head_logo.png" alt=""></a>
+                </div>
+                <div class="daohan">
+                    <ul>
+                        <li class="nav-item {pboot:if(0=='{sort:scode}')}done{/pboot:if}">
+                            <a class="nav-link" href="{pboot:sitepath}/">首页</a>
+                        </li>
+                        {pboot:nav num=10 parent=0}
+                        <li class="nav-item {pboot:if('[nav:scode]'=='{sort:tcode}')}done{/pboot:if}">
+                            <a class="nav-link" href="[nav:link]">[nav:name]</a>
+                            {pboot:if([nav:scode]==5)}
+                            <div class="naverji">
+                                {pboot:2nav parent=[nav:scode]}
+                                <div>
+                                    <a href="[2nav:link]">[2nav:name]</a>
+                                </div>
+                                {/pboot:2nav}
+                            </div>
+                            {/pboot:if}
+                        </li>
+                        {/pboot:nav}
+                    </ul>
+                </div>
+                <div class="scol">
+                    <a href="#"><img src="/images/scol.svg" alt=""><span> 查询报告</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="phone-port">
+            <div class="phone-fix" zt='1'>
+                <div class="phonetop">
+                    <div><a href="{pboot:sitepath}/"><img src="/images/logotop-phone.png" alt=""></a></div>
+                    <div class="phone-hgang">
+                        <div>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="phonetop-ls">
+                    <div>
+                        <ul>
+                            <li class="done">
+                                <a href="{pboot:sitepath}/">首页</a>
+                            </li>
+                            {pboot:nav num=10 parent=0}
+                            <li class="nav-item  {pboot:if('[nav:scode]'=='5')}hid{/pboot:if}">
+                                {pboot:if([nav:scode]==5)}
+                                <a class="nav-link" href="[nav:link]">[nav:name]</a>
+                                <i class="before"></i>
+                                <div class="naverji-phone">
+                                    {pboot:2nav parent=[nav:scode]}
+                                    <div>
+                                        <a href="[2nav:link]">[2nav:name]</a>
+                                    </div>
+                                    {/pboot:2nav}
+                                </div>
+                                {else}
+                                <a class="nav-link" href="[nav:link]">[nav:name]</a>
+                                {/pboot:if}
+                            </li>
+                            {/pboot:nav}
+                            <li>
+                                <a href="">
+                                    <img src="/images/scol-bai.svg" alt=""><span> 报告查询</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </header>

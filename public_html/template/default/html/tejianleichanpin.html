@@ -1,0 +1,93 @@
+{include file=comm/head.html}
+<div class="index proxiangxi tjlcp" num='0'>
+	<div class="pc-port">
+		<div class="banner">
+			<img src="{sort:pic}" alt="">
+		</div>
+	</div>
+	<div class="phone-port">
+		<div class="banner-hpone">
+			<img src="{sort:ico}" alt="">
+		</div>
+	</div>
+	<div class="main typb1">
+    
+ {pboot:list scode=58}
+		<div class="procc yuanfang">
+			<div class="proxximg">
+				<img src="[list:ico]" alt="[list:title]">
+			</div>
+			<div class="proxxtext">
+				<div class="proxxtitle">
+					<div>[list:subtitle]</div>
+					<div>[list:title]</div>
+				</div>
+				<div class="proxxms">[list:content]</div>
+			</div>
+		</div>
+        
+   {/pboot:list} 
+   
+
+                        
+ {pboot:list scode=59}                      
+		<div class="procc yuanfang">
+			<div class="proxxtext">
+				<div class="proxxtitle">
+					<div>[list:subtitle]</div>
+					<div>[list:title]</div>
+				</div>
+				<div class="proxxms">[list:content]</div>
+			</div>
+			<div class="proxximg">
+				<img src="[list:ico]" alt="[list:title]">
+			</div>
+		</div>
+ {/pboot:list} 
+        
+		<div class="cpnr">
+			<div class="yuanfang">
+				<div class="tltle">
+					<div class="lit">news information</div>
+					<div class="zhu">产品内容</div>
+				</div>
+				<div class="cpnrdesc">
+					<div class="cpnrdesctitl">iWES包括以下产品内容<span>4</span></div>
+					<div class="cpnrtext">
+						<ul>
+ {pboot:list scode=60}
+							<li><span>[list:i]</span>[list:title]</li>
+ {/pboot:list} 
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="threesvg">
+			<div class="yuanfang">
+				<div class="tltle">
+					<div class="lit">news information</div>
+					<div class="zhu">产品优势</div>
+				</div>
+				<ul>
+					
+					
+					                     {pboot:list scode=61}
+                
+					<li>
+						<div class="topsvg">
+							<img src="[list:ico]" alt="[list:title]">
+						</div>
+						<div class="sjts">
+							<div class="jzg">[list:title]</div>
+							<div class="miaoshu">[list:content]</div>
+						</div>
+					</li>
+					
+ {/pboot:list} 
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+{include file=comm/foot.html}

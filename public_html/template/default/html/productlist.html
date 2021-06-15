@@ -1,0 +1,187 @@
+{include file=comm/head.html}
+<div class="index product" num='0'>
+  <div class="pc-port">
+    <div class="banner">
+      <img src="{sort:pic}" alt="">
+    </div>
+  </div>
+  <div class="phone-port">
+    <div class="banner-hpone">
+      <img src="{sort:pic}" alt="">
+    </div>
+  </div>
+  <div class="main typb1">
+    <div class="ngs yuanfang">
+      <div class="tltle">
+        <div class="lit">news information</div>
+        <div class="zhu">NGS类</div>
+      </div>
+      <div class="tydesc">
+      
+      {pboot:list scode=73}  
+        <div class="tyli">
+          <div class="tyimg">
+            <div>
+              <a href="[list:outlink]">
+            <img src="[list:ico]" alt="[list:title]">
+          </a>
+
+          </div>
+
+          </div>
+          <div class="tytext">
+            <span class="xuanfusvg">
+              <a href="[list:outlink]">
+                <img src="/images/lv-jiantou.svg" alt="">
+              </a>
+              </span>
+            <div class="tytexttop">[list:title]</div>
+            <div class="tytextzw">
+              <div>产品特点:
+            </div>
+            <div>[list:content]</div>
+          </div>
+          <div class="tytextzw">
+            <div>全面挖掘遗传病因:
+          </div>
+          <div>[list:ext_bingyin]</div>
+        </div>
+      </div>
+    </div>
+    {/pboot:list} 
+
+    {pboot:list scode=77}  
+    <div class="tyli">
+      <div class="tyimg">
+        <div>
+          <a href="[list:outlink]"><img src="[list:ico]" alt="[list:title]"></a>
+        </div>
+
+      </div>
+      <div class="tytext">
+        <span class="xuanfusvg">
+          <a  href="[list:outlink]">
+            <img src="/images/lv-jiantou.svg" alt="">
+          </a>
+          </span>
+        <div class="tytexttop">[list:title]</div>
+        <div class="tytextzw">
+          <div>产品特点:
+        </div>
+        <div>[list:content]</div>
+      </div>
+      <div class="tytextzw">
+        <div>全面挖掘遗传病因:
+      </div>
+      <div>[list:ext_bingyin]</div>
+    </div>
+  </div>
+</div>
+</div>
+{/pboot:list} 
+
+
+</div>
+
+{pboot:list scode=74} 
+<div class="pro-news pro-new1">
+  <div class="tltle">
+    <div class="lit">[list:subtitle]</div>
+    <div class="zhu">[list:title]</div>
+  </div>
+  <div class="yuanfang">
+    <div class="tyimg">
+      <a  href="[list:outlink]"><img src="[list:ico]" alt="[list:title]"></a>
+    </div>
+    <span class="xuanfusvg">
+      <a  href="[list:outlink]"><img src="/images/lv-jiantou.svg" alt=""></a></span>
+    <div class="pnewste">
+      <div class="pro-newstli">[list:content]</div>
+      <div class="pro-newsmore"><a  href="[list:outlink]">Learn more</a></div>
+    </div>
+
+    
+  </div>
+</div>
+{/pboot:list} 
+
+{pboot:list scode=75} 
+<div class="pro-news">
+  <div class="tltle">
+    <div class="lit">[list:subtitle]</div>
+    <div class="zhu">[list:title]</div>
+  </div>
+  <div class="yuanfang">
+    <div class="tyimg">
+      <a  href="[list:outlink]"><img src="[list:ico]" alt="[list:title]"></a>
+    </div>
+    <span class="xuanfusvg">
+      <a  href="[list:outlink]"><img src="/images/lv-jiantou.svg" alt=""></a>
+      </span>
+    <div class="pnewste">
+      <div>[list:content]</div>
+      <div><a  href="[list:outlink]">Learn more</a></div>
+    </div>
+  </div>
+</div>
+{/pboot:list} 
+<div class="syszz yuanfang">
+  <div class="tltle">
+    <div class="lit">news information</div>
+    <div class="zhu">实验室资质</div>
+  </div>
+  <div>
+    <div class="porlsswiper pc-port">
+      <div class="home-swiperall swiper-prols1">
+        <div class="home-swipezjr swiper-wrapper">
+          
+          
+          
+          
+ {pboot:list scode=78} 
+          
+          <div class="swiper-slide">
+             <img src="[list:ico]" alt="[list:title]">
+          </div>
+  
+{/pboot:list}
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <!-- Add Arrows -->
+    </div>
+    <div class="syszzphone phone-port">
+      {pboot:list scode=78} 
+      <div class="">
+         <img src="[list:ico]" alt="[list:title]">
+      </div>
+
+{/pboot:list}
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<script src="/js/swiper-bundle.min.js"> </script>
+<script>
+  $(function () {
+    var swiper = new Swiper('.swiper-prols1', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  })
+</script>
+
+{include file=comm/foot.html}

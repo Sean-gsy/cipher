@@ -1,0 +1,85 @@
+{include file=comm/head.html}
+<div class="index zhyxff" num='0'>
+	<div class="pc-port">
+		<div class="banner">
+			<img src="{sort:pic}" alt="">
+		</div>
+	</div>
+	<div class="phone-port">
+		<div class="banner-hpone">
+			<img src="{sort:ico}" alt="">
+		</div>
+	</div>
+	<div class="main typb1">
+		<div class="jycx">
+			<div class="yuanfang pc-port">
+{pboot:list scode=62}
+		<img src="[list:ico]" alt="[list:title]">
+ {/pboot:list} 
+			</div>
+			<div class="yuanfang phone-port">
+				<img src="/images/jycx-sj.png" alt="">
+			</div>
+		</div>
+		<div class="gnyz">
+			<div class="tltle">
+				<div class="lit">functional validation</div>
+				<div class="zhu">功能验证的意义</div>
+				<div class="wei">遗传信息的传递 / The central dogma</div>
+			</div>
+			<div class="yuanfang">
+				<img src="/images/gnyz.png" alt="">
+			</div>
+			<div class="yuanfang gnyzdesc">
+				<ul>
+                
+{pboot:list scode=63}
+					<li>
+						<div>
+							<img src="[list:ico]" alt="[list:title]">
+						</div>
+						<div class="gnyztext">
+							<div>[list:title]</div>
+							<div>[list:content]</div>
+						</div>
+					</li>
+ {/pboot:list} 
+				</ul>
+			</div>
+		</div>
+		<div class="gnyzlx">
+			<div class="tltle">
+				<div class="lit">Technical route</div>
+				<div class="zhu">功能验证技术路线</div>
+			</div>
+			<div class="phone-port gnyzlximg">
+				<img src="/images/gnyzlxbg-sj.png" alt="">
+			</div>
+		</div>
+		<div class="fwlc">
+			<div class="tltle">
+				<div class="lit">Service Process</div>
+				<div class="zhu">服务流程</div>
+			</div>
+			<div class="fwlcdesc">
+				<ul class="yuanfang">
+{pboot:list scode=65}
+					<li>
+						<div>
+							<img src="[list:ico]" alt="[list:title]">
+						</div>
+						<div>
+							[list:content]
+						</div>
+					</li>
+ {/pboot:list}
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+<script>
+		$('body').css('background', 'none')
+</script>
+{include file=comm/foot.html}

@@ -1,0 +1,265 @@
+{include file=comm/head-shouye.html}
+<div class="banner-home home">
+    <div class="porlsswiper">
+        <div class=" swiper-prols-bander swiper-no-swiping">
+            <div class="swiper-wrapper">
+
+                {pboot:list scode=35 num=2}
+
+                <div class="swiper-slide [list:i]">
+                    {pboot:if([list:i]==2)}
+                    <video class="pc-port" width="100%" preload="auto" loop="" autoplay="" muted="" playsinline="">
+                        <source type="video/mp4" src="/video/home-bander.mp4"></video>
+                    {else}
+                    <img src="[list:ico]" alt="" class="pc-port">
+                    {/pboot:if}
+                    <img src="[list:ico]" alt="" class="pc-port">
+                    <img src="[list:ext_mico]" alt="" class="phone-port">
+                    <div>
+                        <div class="bantxt1">[list:title]</div>
+                        <div class="bantxt2">[list:content]</div>
+                        <div class="bantxt3">
+                            <a href="/">
+                                <!-- <a href="[list:link]"> -->
+                                <span class="bantxt3dban"></span>
+                                <span class="bantxt3dbantxt">查看详情</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {/pboot:list}
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="home main typb1">
+    <div class="hover">
+        <div>
+            <div class="hoverxf"></div>
+            <ul>
+                {pboot:list scode=36}
+                <li>
+                    <div>
+                        <div class="hovernum">0[list:i]</div>
+                        <div class="hoversvg">
+                            <i></i>
+                        </div>
+                        <div class="hoverky">[list:title]</div>
+                        <div class="hoverjj">[list:subtitle]</div>
+                        <div class="hoverdesc">
+                            [list:content]
+                        </div>
+                        <div class="hoversvg2">
+                            <i></i>
+                        </div>
+                    </div>
+
+                </li>
+                {/pboot:list}
+            </ul>
+        </div>
+    </div>
+    <div class="jhxm">
+        <!-- <div class="tongyi"></div> -->
+        <div>
+            <div>
+
+                <img src="/images/jhxmbg.png" alt="">
+
+            </div>
+            <div class="porlsswiper">
+                <div class="home-swiperall swiper-prols2">
+                    <div class="home-swipezjr swiper-wrapper">
+
+
+
+                        {pboot:list scode=37}
+                        <div class="swiper-slide">
+                            <div class="spnum">[list:i]</div>
+                            <div class="jhxmdesc">
+                                <div class="sptitle">[list:title]</div>
+                                <div class="spdesc">[list:content]</div>
+                                <div class="sppg">
+                                    {pboot:tags id=[list:id]}
+                                    <div><span><img src="/images/cpduigou.svg" alt="">[tags:text]</span></div>
+                                    {/pboot:tags}
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        {/pboot:list}
+
+
+
+
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="newls">
+        <div class="yuanfang">
+            <div class="tltle">
+                <div class="lit">news information</div>
+                <div class="zhu">新闻动态</div>
+            </div>
+            <div class="newlslsdesc">
+                {pboot:list scode=3,4 num=3}
+                <div class="newlsli hyhd newlx[list:scode]">
+                    <div class="newsimg">
+                        <div>
+                            <a href="[list:link]">
+                                <img src="[list:ico]" alt="[list:title]">
+                            </a>
+                            <!-- <em>[list:scode]</em> -->
+                        </div>
+                    </div>
+                    <div class="newlswste">
+                        <div>[list:title lencn=28]</div>
+                        <div><a href="[list:link]">Learn more</a></div>
+                        <span class="xuanfusvg">
+                            <a href="[list:link]">
+                                <img src="/images/lv-jiantou.svg" alt="">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                {/pboot:list}
+            </div>
+        </div>
+    </div>
+    <div class="lczl">
+        <div class="yuanfang">
+            <div class="tltle">
+                <div class="lit">cooperative partner</div>
+                <div class="zhu">合作伙伴</div>
+            </div>
+            <div class="lczllogo">
+                <ul>
+
+                    {pboot:list scode=38}
+
+                    <li>
+                        <div><img src="[list:ico]" alt="[list:title]"></div>
+
+                    </li>
+                    {/pboot:list}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="liuyan home typb1">
+    <div class="tltle">
+        <div class="lit">Leave us a message</div>
+        <div class="zhu">给我们留言</div>
+    </div>
+    <form action="{pboot:form fcode=2}" method="post">
+        <div class="liuyanbot yuanfang">
+            <ul>
+                <li>
+                    <div>姓名：</div>
+                    <div><input type="text" name="name"></div>
+                </li>
+                <li>
+                    <div>手机：</div>
+                    <div><input type="text" name="phone"></div>
+                </li>
+                <li>
+                    <div>产品：</div>
+                    <div><input type="text" name="product"></div>
+                </li>
+            </ul>
+            <div class="tijiao">
+                <div class="bantxt3">
+                    <a href="javascript:void(0);">
+                        <span class="bantxt3dban"></span>
+                        <span class="bantxt3dbantxt"> <button type="submit">提交</button></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="/js/swiper-bundle.min.js"></script>
+
+<script>
+    $(function () {
+        // 轮播
+        var swiper = new Swiper('.swiper-prols-bander', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            slidesPerGroup: 1,
+            // 自动播放
+            autoplay: true,
+            // 滑动时间
+            speed: 500,
+            loop: true,
+            loopFillGroupWithBlank: true,
+        });
+        var swiper = new Swiper('.swiper-prols2', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            // loop: true,
+            // loopFillGroupWithBlank: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        $('.jhxm .swiper-pagination-bullet').eq(0).html('<b>01</b>')
+        $('.jhxm .swiper-pagination-bullet').eq($('.jhxm .swiper-pagination-bullet').length - 1).html('<b>0' +
+            $('.jhxm .swiper-pagination-bullet').length + '</b>')
+
+        $('.home .hover ul li').hover(function () {
+            $('.home .hover .hoverxf ').css('left', $(this).index() * 25 + '%')
+        })
+        // shouyebander反白
+        $('.homeshouye header .liebiao').hover(function () {
+            $(this).addClass('bannershow')
+        })
+        $(document).scroll(function () {
+            // console.log($(document).scrollTop());
+            if ($(document).scrollTop() == 0) {
+                $('.homeshouye header .liebiao').removeClass('bannershow')
+            } else {
+                $('.homeshouye header .liebiao').addClass('bannershow')
+            }
+        });
+        if ($(document).scrollTop() == 0) {
+            $('.homeshouye header .liebiao').removeClass('bannershow')
+        } else {
+            $('.homeshouye header .liebiao').addClass('bannershow')
+        }
+        if ($('html')[0].clientWidth > 1100) {
+            $('.home .hover .hoverxf').css('height', $('.home .hover')[0].offsetHeight)
+            let maxheight = 0;
+            for (let index = 0; index < $('.home .hover .hoverdesc').length; index++) {
+                // console.log($('.home .hover .hoverdesc').eq(index)[0].offsetHeight);
+                if (maxheight >= $('.home .hover .hoverdesc').eq(index)[0].offsetHeight) {} else {
+                    maxheight = $('.home .hover .hoverdesc').eq(index)[0].offsetHeight
+                }
+                if (index >= 3) {
+                    $('.home .hover .hoverdesc').css('height', maxheight)
+                }
+            }
+        }
+    })
+</script>
+{include file=comm/foot-shouye.html}

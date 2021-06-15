@@ -1,0 +1,40 @@
+{include file=comm/head.html}
+<div class="index news" num='0'>
+  <div class="main">
+    <div class="yuanfang">
+      <div class="newstop zt{sort:scode}"> {pboot:nav parent=2}<span id="[nav:scode]"> 
+          <a href="[nav:link]">[nav:name]</a>
+           </span>{/pboot:nav} </div>
+      <div class="newls"> 
+          <div class="" id="[nav:scode]">
+            <div class="newlslsdesc"> 
+              {pboot:list  num=9 order=date}
+              <div class="newlsli hyhd">
+                <div class="newsimg">
+                  <div> <a href="[list:link]"> <img src="[list:ico]" alt="[list:title]"> </a> </div>
+                </div>
+                <div class="newlswste">
+                  <div>[list:title lencn=28]</div>
+                  <div><a href="[list:link]">Learn more</a></div>
+                  <span class="xuanfusvg"> <a href="[list:link]"> <img src="/images/lv-jiantou.svg" alt=""> </a> </span>
+                </div>
+              </div>
+              {/pboot:list} 
+            </div>
+            {include file=comm/page.html}
+          </div>
+          </div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
+<script>
+  $(function () {
+    // $('.news .newstop span').click(function () {
+    //   $('.news .newstop span').removeClass('show')
+    //   $(this).addClass('show')
+    //   console.log(123);
+    // })
+  })
+</script>
+{include file=comm/foot.html}
